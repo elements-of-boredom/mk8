@@ -99,6 +99,10 @@ mk8.data = (function(mk8,window,$,undefined) {
 			return new Driver("BLANK",-1);
 		}
 	};
+
+	my.getDriverGrid = function(){
+		return driverGrid;
+	};
 	//endregion #DriverData
 
 	//region #Chassie Data
@@ -301,6 +305,15 @@ mk8.data = (function(mk8,window,$,undefined) {
        "Super Glider" : baseStats,
        "BLANK" : baseStats
 	};
+
+	/// Defines the Driver Grid. Order is Left->Right, Top -> Bottom
+	var driverGrid = [
+		"Mario","Luigi","Peach","Daisy","Rosalina","Metal Mario", //Row 1
+		"Yoshi","Toad","Koopa Troopa","Shy Guy","Lakitu","Toadette", //Row 2
+		"Baby Mario", "Baby Luigi","Baby Peach", "Baby Daisy", "Baby Rosalina","Pink Gold Peach", //Row 3
+		"Bowser", "Donky Kong", "Wario", "Waluigi", "Lemmy","Roy", //Row 4
+		"Iggy","Larry","Wendy","Ludwig","Morton","Mii" //Row 5
+	];
 
 	return my;
 }(window.mk8,this,jQuery,undefined))
