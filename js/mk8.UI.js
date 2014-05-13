@@ -4,10 +4,12 @@ mk8.UI = (function(mk8,window,$,undefined) {
 	var my = {},
 		driverbox = $('#builder-driver'),
 		loadingbox = $('#loading-modal'),
-		drivertemplate = '<div class="driver-portrait" data-drivername="{X}"></div>';
+		drivertemplate = '<div class="driver-portrait" data-drivername="{X}"></div>',
+		selectedbox = $('#driver-highlight');
 
 	my.init = function(){
 		buildDriverSquares();
+		wireEvents();
 		console.log('UI initialized');
 		loadingbox.hide();
 	};
@@ -19,6 +21,20 @@ mk8.UI = (function(mk8,window,$,undefined) {
 		for(var x = 0; x < drivers.length; x++ ){
 			driverbox.append(drivertemplate.replace("{X}",drivers[x]));
 		}
+	};
+
+	var wireEvents = function(){
+		driverbox.on('click','.driver-portrait',function(){
+			mk8.builder.setDriver($(this).data('drivername'));
+			highlightDriver($(this));
+			mk8.builder.calculateTotals();
+		});
+	};
+
+	var highlightDriver = function(target){
+		var p = target.position();		
+
+		selectedbox.show().css({top:p.top-5, left:p.left-((p.left / target.width()) + 1)});
 	};
 
 	//endregion #Privates

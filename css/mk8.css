@@ -5,4 +5,6 @@
 #loading{position: relative;top:20%;}
 .loadingtext{display:block;color:#ffffff;}
 
-.driver-portrait{width:75px;height:76px;display:inline-block;background-color:#ff6000;margin:0px 3px;opacity: 0.3;}
+#driver-highlight{display:none;position: absolute;}
+
+.driver-portrait{width:75px;height:76px;display:inline-block;margin:0px 3px;}

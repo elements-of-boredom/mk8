@@ -13,28 +13,28 @@ mk8.builder = (function(mk8,window,$,undefined) {
 	my.init = function(){
 		mk8.data.init();
 		mk8.UI.init();
-		SetBaseChassie("Standard Kart");
-		SetBaseTire("Standard Wheels");
-		SetBaseGlider("Wario Glider");
-		SetBaseDriver("Baby Mario");
+		setBaseChassie("Standard Kart");
+		setBaseTire("Standard Wheels");
+		setBaseGlider("Wario Glider");
+		setBaseDriver("Baby Mario");
 
 		console.log(mk8.builder.calculateTotals());
 	};
 
-	my.SetDriver = function(drivername){
-		SetBaseDriver(drivername);
+	my.setDriver = function(drivername){
+		setBaseDriver(drivername);
 	};
 
-	my.SetChassie = function(chassiename){
-		SetBaseChassie(chassiename);
+	my.setChassie = function(chassiename){
+		setBaseChassie(chassiename);
 	};
 
-	my.SetTire = function(tirename){
-		SetBaseTire(tirename);
+	my.setTire = function(tirename){
+		setBaseTire(tirename);
 	};
 
-	my.SetGlider = function(glidername){
-		SetBaseGlider(glidername);
+	my.setGlider = function(glidername){
+		setBaseGlider(glidername);
 	};
 
 	my.calculateTotals = function(){
@@ -56,7 +56,7 @@ mk8.builder = (function(mk8,window,$,undefined) {
 
 
 	//PRIVATE SECTION 
-	var SetBaseDriver = function(drivername){
+	var setBaseDriver = function(drivername){
 		try{
 			currentDriver = mk8.data.getDriverByName(drivername);
 		}catch(err){
@@ -64,7 +64,7 @@ mk8.builder = (function(mk8,window,$,undefined) {
 		};
 	};
 
-	var SetBaseChassie = function(chassiename){
+	var setBaseChassie = function(chassiename){
 		try{
 			currentChassie = mk8.data.getChassieByName(chassiename);
 		}catch(err){
@@ -72,7 +72,7 @@ mk8.builder = (function(mk8,window,$,undefined) {
 		};
 	};
 
-	var SetBaseTire = function(tirename){
+	var setBaseTire = function(tirename){
 		try{
 			currentTire = mk8.data.getTireByName(tirename);
 		}catch(err){
@@ -80,7 +80,7 @@ mk8.builder = (function(mk8,window,$,undefined) {
 		}
 	};
 
-	var SetBaseGlider = function(glidername){
+	var setBaseGlider = function(glidername){
 		try{
 			currentGlider = mk8.data.getGliderByName(glidername);
 		}catch(err){
