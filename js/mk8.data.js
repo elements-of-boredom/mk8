@@ -244,7 +244,7 @@ mk8.data = (function(mk8,window,$,undefined) {
 		"Badwagon" : {Speed : 0, Acceleration : -0.5, Weight : 0.5, Handling : -0.5, Grip : 0.5},
 		"Tri-mash" : {Speed : 0, Acceleration : -0.5, Weight : 0.5, Handling : -0.5, Grip : 0.5},
 		"Buggybud" : {Speed : -0.75, Acceleration : 1.25, Weight : -0.5, Handling : 0.5, Grip : -0.25},
-		"Bowser's Airship" : {Speed	: -0.75, Acceleration : 1.25, Weight : -0.5, Handling : 0.5, Grip : -0.25},
+		"Landship" : {Speed	: -0.75, Acceleration : 1.25, Weight : -0.5, Handling : 0.5, Grip : -0.25},
 		"Circuit Special" : {Speed : 0.5, Acceleration : -0.25, Weight : 0.25, Handling : 0, Grip : 1},
 		"Pipe Frame" : {Speed : -0.25, Acceleration : 0.25, Weight : -0.25, Handling : 0, Grip : 0.25},
 		"Gold Standard" : {Speed : 0.25, Acceleration : -0.25, Weight : 0.25, Handling : 0, Grip : -0.25},
@@ -275,6 +275,16 @@ mk8.data = (function(mk8,window,$,undefined) {
 	     "Metal Wheels" : {Speed : 0.25, Acceleration : -0.5, Weight : 0.5, Handling : 0, Grip : -0.5},
 	     "Cream Blocks" : baseStats,
 	     "Wooden Wheels" : {Speed : -0.25, Acceleration : 0.25, Weight : -0.25, Handling : -0.25, Grip : 0.5},
+	     "Gold Tires" : {Speed : 1.25, Acceleration : -0.75, Weight : 0.75, Handling : -1.25, Grip : -2.5},
+	     "Sponge" : {Speed : -0.25, Acceleration : 0.5, Weight : -0.75, Handling : 0, Grip : 0},
+	     "Normal Blue" : baseStats
+	     "Crimson Slim" : baseStats
+	     "Hot Monster" : baseStats
+	     "Cyber Slick" : baseStats
+	     "Block" : baseStats
+	     "Button" : baseStats
+	     "Cushion" : baseStats
+	     "Azure Roller" : baseStats
 	     "BLANK" : baseStats
 	};
 
@@ -288,6 +298,7 @@ mk8.data = (function(mk8,window,$,undefined) {
        "MKTV Parafoil" : {Speed : 0, Acceleration : 0.25, Weight : -0.25, Handling : 0, Grip : 0},
        "Peach Parasol" : {Speed : 0, Acceleration : 0.25, Weight : -0.25, Handling : 0, Grip : 0},
        "Parachute" : {Speed : 0, Acceleration : 0.25, Weight : -0.25, Handling : 0, Grip : 0},
+       "Super Glider" : baseStats,
        "BLANK" : baseStats
 	};
 
