@@ -257,7 +257,7 @@ mk8.data = (function(mk8,window,$,undefined) {
 		"Super Comet" : {Speed : 0, Acceleration : 0.75, Weight : -0.25, Handling : 0.75, Grip : 1.25},
 		"Moter Dozer" : {Speed : 0, Acceleration : 0.25, Weight : -0.25, Handling : 0.5, Grip : -0.5},
 		"Burning Bowl" : {Speed : 0, Acceleration : 0.25, Weight : -0.25, Handling : 0.5, Grip : -0.25},
-		"Broad Bean" : {Speed : -0.75, Acceleration : 1.25, Weight : -0.5, Handling : 0.5, Grip : -0.25},
+		"Mr. Scooty" : {Speed : -0.75, Acceleration : 1.25, Weight : -0.5, Handling : 0.5, Grip : -0.25},
 		"Maximum" : baseStats,
 
 		"Standard Quad" : {Speed : -0, Acceleration : -0.5, Weight : 0.5, Handling : -0.5, Grip : 0.5},
@@ -277,14 +277,14 @@ mk8.data = (function(mk8,window,$,undefined) {
 	     "Wooden Wheels" : {Speed : -0.25, Acceleration : 0.25, Weight : -0.25, Handling : -0.25, Grip : 0.5},
 	     "Gold Tires" : {Speed : 1.25, Acceleration : -0.75, Weight : 0.75, Handling : -1.25, Grip : -2.5},
 	     "Sponge" : {Speed : -0.25, Acceleration : 0.5, Weight : -0.75, Handling : 0, Grip : 0},
-	     "Normal Blue" : baseStats
-	     "Crimson Slim" : baseStats
-	     "Hot Monster" : baseStats
-	     "Cyber Slick" : baseStats
-	     "Block" : baseStats
-	     "Button" : baseStats
-	     "Cushion" : baseStats
-	     "Azure Roller" : baseStats
+	     "Normal Blue" : baseStats,
+	     "Crimson Slim" : baseStats,
+	     "Hot Monster" : baseStats,
+	     "Cyber Slick" : baseStats,
+	     "Block" : baseStats,
+	     "Button" : baseStats,
+	     "Cushion" : baseStats,
+	     "Azure Roller" : baseStats,
 	     "BLANK" : baseStats
 	};
 
