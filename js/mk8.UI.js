@@ -49,7 +49,12 @@ mk8.UI = (function(mk8,window,$,undefined) {
 	};
 
 	var buildKartBar = function(){
-		equipmentbox.closest('.karts').append()
+		var k = mk8.data.getChassieDataByName();//no name gets all karts
+		for(var x in k){
+			if(k.hasOwnProperty(x)){
+				equipmentbox.find('.karts').append(karttemplate.replace("{X}",k[x].name));
+			}
+		}
 	};
 
 	var buildWheelBar = function(){
