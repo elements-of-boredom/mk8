@@ -282,13 +282,13 @@ mk8.data = (function(mk8,window,$,undefined) {
 	     "Crimson Slim" : {Speed : 0.25, Acceleration : -0.25, Weight : 0, Handling : 0.25, Grip : -0.5},
 	     "Metal" : {Speed : 0.25, Acceleration : -0.5, Weight : 0.5, Handling : 0, Grip : -0.5},
 	     "Retro Off-Road" : baseStats,
-	     "Wooden" : {Speed : -0.25, Acceleration : 0.25, Weight : -0.25, Handling : -0.25, Grip : 0.5},
+	     "Wood" : {Speed : -0.25, Acceleration : 0.25, Weight : -0.25, Handling : -0.25, Grip : 0.5},
 	     "Gold Tires" : {Speed : 1, Acceleration : -0.5, Weight : 0.5, Handling : -1.25, Grip : -2.5},
 	     "Sponge" : {Speed : -0.25, Acceleration : 0.5, Weight : -0.75, Handling : 0, Grip : 0},
 	     "Normal Blue" : baseStats,
 	     "Block" : baseStats,
 	     "Button" : baseStats,
-	     "Cushion" : baseStats,
+	     "Cushion" : {Speed : -0.25, Acceleration : 0.25, Weight : -0.25, Handling : -0.25, Grip : 0.5},
 	     
 	     "BLANK" : baseStats
 	};
