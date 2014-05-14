@@ -7,7 +7,9 @@ mk8.UI = (function(mk8,window,$,undefined) {
 		loadingbox = $('#loading-modal'),
 		drivertemplate = '<div class="driver-portrait" data-drivername="{X}"></div>',
 		selectedbox = $('#driver-highlight'),
-		totalbartemplate = '<div class="verticalbar"></div>';
+		totalbartemplate = '<div class="verticalbar"></div>',
+		selectorbox = $('#builder-equipment .equipment-selector'),
+		equipmentbox = $('#builder-equipment');
 
 	my.init = function(){
 		buildDriverSquares();
@@ -49,6 +51,11 @@ mk8.UI = (function(mk8,window,$,undefined) {
 			var stats = mk8.builder.calculateTotals();
 			console.log(stats);
 			updateTotals(stats);
+		});
+
+		equipmentbox.on('click', '.column-selector',function(){
+			//Move the selector box to each column selected.
+			selectorbox.css({left:$(this).position().left-5});
 		});
 	};
 
