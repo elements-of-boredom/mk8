@@ -34,14 +34,26 @@
 	padding-left:8px;
 }
 .equipment-selector{
-	position: absolute;
+	position: relative;
 	z-index:3;
 	text-align:center;
+	height:175px;
+	width:175px;
+	top:105px;
 }
 .itemselector{
 	position: absolute;
 	top:20px;
 	left:-4px;
+}
+.uppertriangle{
+	position:absolute;
+	left:48px;
+}
+.lowertriangle{
+	position: absolute;
+	left:48px;
+	top:150px;
 }
 
 .column-selector{
