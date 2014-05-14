@@ -6,6 +6,7 @@ mk8.UI = (function(mk8,window,$,undefined) {
 		totalsbox = $('#builder-totals'),
 		loadingbox = $('#loading-modal'),
 		drivertemplate = '<div class="driver-portrait" data-drivername="{X}"></div>',
+		karttemplate = '<div class="item-image" data-kartname="{X}"><img src="img/kart_0.png"/></div>',
 		selectedbox = $('#driver-highlight'),
 		totalbartemplate = '<div class="verticalbar"></div>',
 		selectorbox = $('#builder-equipment .equipment-selector'),
@@ -14,6 +15,9 @@ mk8.UI = (function(mk8,window,$,undefined) {
 	my.init = function(){
 		buildDriverSquares();
 		buildTotalsBars();
+		buildKartBar();
+		buildWheelBar();
+		buildGliderBar();
 		wireEvents();
 		console.log('UI initialized');
 		
@@ -44,6 +48,18 @@ mk8.UI = (function(mk8,window,$,undefined) {
 		});
 	};
 
+	var buildKartBar = function(){
+		equipmentbox.closest('.karts').append()
+	};
+
+	var buildWheelBar = function(){
+
+	};
+
+	var buildGliderBar = function(){
+
+	};
+
 	var wireEvents = function(){
 		driverbox.on('click','.driver-portrait',function(){
 			mk8.builder.setDriver($(this).data('drivername'));
@@ -55,7 +71,7 @@ mk8.UI = (function(mk8,window,$,undefined) {
 
 		equipmentbox.on('click', '.column-selector',function(){
 			//Move the selector box to each column selected.
-			selectorbox.css({left:$(this).position().left-5});
+			selectorbox.animate({left:$(this).position().left-5});
 		});
 	};
 
@@ -73,7 +89,6 @@ mk8.UI = (function(mk8,window,$,undefined) {
 
 	var highlightDriver = function(target){
 		var p = target.position();		
-
 		selectedbox.show().css({top:p.top-5, left:p.left-((p.left / target.width()) + 1)});
 	};
 
