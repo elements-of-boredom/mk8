@@ -14,11 +14,12 @@ mk8.builder = (function(mk8,window,$,undefined) {
 		mk8.data.init();
 		mk8.UI.init();
 		setBaseChassie("Standard Kart");
-		setBaseTire("Standard Wheels");
+		setBaseTire("Standard");
 		setBaseGlider("Wario Glider");
 		setBaseDriver("Baby Mario");
 
-		console.log(mk8.builder.calculateTotals());
+		mk8.UI.refreshStats(mk8.builder.calculateTotals());
+		setTimeout(mk8.UI.hideLoading,1000);
 	};
 
 	my.setDriver = function(drivername){
