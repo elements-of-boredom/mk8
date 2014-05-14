@@ -258,7 +258,7 @@ mk8.data = (function(mk8,window,$,undefined) {
 		"Mach GP" : {Speed : 0, Acceleration : 0.75, Weight : -0.25, Handling : 0.75, Grip : -1.25},
 		"Yoshi Bike" : {Speed : 0, Acceleration : 0.75, Weight : -0.25, Handling : 0.75, Grip : 1.25},
 		"Jet Rider" : {Speed : 0, Acceleration : 0.75, Weight : -0.25, Handling : 0.75, Grip : -1.25},
-		"Super Comet" : {Speed : 0, Acceleration : 0.75, Weight : -0.25, Handling : 0.75, Grip : 1.25},
+		"Comet" : {Speed : 0, Acceleration : 0.75, Weight : -0.25, Handling : 0.75, Grip : 1.25},
 		"Moter Dozer" : {Speed : 0, Acceleration : 0.25, Weight : -0.25, Handling : 0.5, Grip : -0.5},
 		"Burning Bowl" : {Speed : 0, Acceleration : 0.25, Weight : -0.25, Handling : 0.5, Grip : -0.25},
 		"Mr. Scooty" : {Speed : -0.75, Acceleration : 1.25, Weight : -0.5, Handling : 0.5, Grip : -0.25},
@@ -271,30 +271,31 @@ mk8.data = (function(mk8,window,$,undefined) {
 	};
 
 	var tiresList = {
-	     "Standard Wheels" : baseStats,
-	     "Monster Wheels" : {Speed : 0, Acceleration : -0.5, Weight : 0.5, Handling : -.75, Grip : 0.75},
-	     "Slick Wheels" : {Speed : 0.5, Acceleration : -0.25, Weight : 0.25, Handling : 0, Grip : -1},
-	     "Roller Wheels" : {Speed : -0.5, Acceleration : 1, Weight : -0.5, Handling : 0.25, Grip : -0.25},
-	     "Slim Wheels" : {Speed : 0.25, Acceleration : -0.25, Weight : 0, Handling : 0.25, Grip : -0.5},
-	     "Metal Wheels" : {Speed : 0.25, Acceleration : -0.5, Weight : 0.5, Handling : 0, Grip : -0.5},
-	     "Cream Blocks" : baseStats,
-	     "Wooden Wheels" : {Speed : -0.25, Acceleration : 0.25, Weight : -0.25, Handling : -0.25, Grip : 0.5},
+	     "Standard" : baseStats,
+	     "Monster" : {Speed : 0, Acceleration : -0.5, Weight : 0.5, Handling : -.75, Grip : 0.75},
+	     "Hot Monster" : {Speed : 0, Acceleration : -0.5, Weight : 0.5, Handling : -.75, Grip : 0.75},
+	     "Slick" : {Speed : 0.5, Acceleration : -0.25, Weight : 0.25, Handling : 0, Grip : -1},
+	     "Cyber Slick" : {Speed : 0.5, Acceleration : -0.25, Weight : 0.25, Handling : 0, Grip : -1},
+	     "Roller" : {Speed : -0.5, Acceleration : 1, Weight : -0.5, Handling : 0.25, Grip : -0.25},
+	     "Azure Roller" : {Speed : -0.5, Acceleration : 1, Weight : -0.5, Handling : 0.25, Grip : -0.25},
+	     "Slim" : {Speed : 0.25, Acceleration : -0.25, Weight : 0, Handling : 0.25, Grip : -0.5},
+	     "Crimson Slim" : {Speed : 0.25, Acceleration : -0.25, Weight : 0, Handling : 0.25, Grip : -0.5},
+	     "Metal" : {Speed : 0.25, Acceleration : -0.5, Weight : 0.5, Handling : 0, Grip : -0.5},
+	     "Retro Off-Road" : baseStats,
+	     "Wooden" : {Speed : -0.25, Acceleration : 0.25, Weight : -0.25, Handling : -0.25, Grip : 0.5},
 	     "Gold Tires" : {Speed : 1.25, Acceleration : -0.75, Weight : 0.75, Handling : -1.25, Grip : -2.5},
 	     "Sponge" : {Speed : -0.25, Acceleration : 0.5, Weight : -0.75, Handling : 0, Grip : 0},
 	     "Normal Blue" : baseStats,
-	     "Crimson Slim" : baseStats,
-	     "Hot Monster" : baseStats,
-	     "Cyber Slick" : baseStats,
 	     "Block" : baseStats,
 	     "Button" : baseStats,
 	     "Cushion" : baseStats,
-	     "Azure Roller" : baseStats,
+	     
 	     "BLANK" : baseStats
 	};
 
 	var glidersList = {
        "Wario Glider" : baseStats,
-       "WaddleWing Kite" : baseStats,
+       "Waddle Wing" : baseStats,
        "Sail Plane" : baseStats,
        "Cloud Balloon" : {Speed : 0, Acceleration : 0.25, Weight : -0.25, Handling : 0, Grip : 0},
        "Flower Glider" : {Speed : 0, Acceleration : 0.25, Weight : -0.25, Handling : 0, Grip : 0},
