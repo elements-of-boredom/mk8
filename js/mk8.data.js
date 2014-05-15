@@ -283,7 +283,7 @@ mk8.data = (function(mk8,window,$,undefined) {
 	     "Metal" : {Speed : 0.25, Acceleration : -0.5, Weight : 0.5, Handling : 0, Grip : -0.5},
 	     "Retro Off-Road" : baseStats,
 	     "Wood" : {Speed : -0.25, Acceleration : 0.25, Weight : -0.25, Handling : -0.25, Grip : 0.5},
-	     "Gold Tires" : {Speed : 1, Acceleration : -0.5, Weight : 0.5, Handling : -1.25, Grip : -2.5},
+	     "Gold Tires" : {Speed : .25, Acceleration : 0.25, Weight : -0.25, Handling : 0, Grip : -1.5},
 	     "Sponge" : {Speed : -0.25, Acceleration : 0.5, Weight : -0.75, Handling : 0, Grip : 0},
 	     "Normal Blue" : baseStats,
 	     "Block" : baseStats,
