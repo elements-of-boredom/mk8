@@ -244,7 +244,7 @@ mk8.data = (function(mk8,window,$,undefined) {
 		"Cat Cruiser" : baseStats,
 		"Sneakart" : baseStats,
 		"Mach 8" : {Speed : 0.5, Acceleration : -0.25, Weight : 0.25, Handling : 0, Grip : -1},
-		"Steel Diver" : {Speed : 0, Acceleration : 0.25, Weight : -0.25, Handling : .25, Grip : 0.5},
+		"Steel Diver" : {Speed : 0, Acceleration : -0.5, Weight : 0.5, Handling : 0.5, Grip : 0.5},
 		"Badwagon" : {Speed : 0, Acceleration : -0.5, Weight : 0.5, Handling : -0.5, Grip : 0.5},
 		"Tri-Speeder" : {Speed : 0, Acceleration : -0.5, Weight : 0.5, Handling : -0.5, Grip : 0.5},
 		"Biddybuggy" : {Speed : -0.75, Acceleration : 1.25, Weight : -0.5, Handling : 0.5, Grip : -0.25},
@@ -272,24 +272,23 @@ mk8.data = (function(mk8,window,$,undefined) {
 
 	var tiresList = {
 	     "Standard" : baseStats,
+             "Blue Standard" : baseStats,
 	     "Monster" : {Speed : 0, Acceleration : -0.5, Weight : 0.5, Handling : -.75, Grip : 0.75},
 	     "Hot Monster" : {Speed : 0, Acceleration : -0.5, Weight : 0.5, Handling : -.75, Grip : 0.75},
 	     "Slick" : {Speed : 0.5, Acceleration : -0.25, Weight : 0.25, Handling : 0, Grip : -1},
 	     "Cyber Slick" : {Speed : 0.5, Acceleration : -0.25, Weight : 0.25, Handling : 0, Grip : -1},
 	     "Roller" : {Speed : -0.5, Acceleration : 1, Weight : -0.5, Handling : 0.25, Grip : -0.25},
-	     "Azure Roller" : {Speed : -0.5, Acceleration : 1, Weight : -0.5, Handling : 0.25, Grip : -0.25},
+	     "Azure Roller" : {Speed : -0.5, Acceleration : 1, Weight : -0.5, Handling : -0.75, Grip : -0.25},
 	     "Slim" : {Speed : 0.25, Acceleration : -0.25, Weight : 0, Handling : 0.25, Grip : -0.5},
 	     "Crimson Slim" : {Speed : 0.25, Acceleration : -0.25, Weight : 0, Handling : 0.25, Grip : -0.5},
 	     "Metal" : {Speed : 0.25, Acceleration : -0.5, Weight : 0.5, Handling : 0, Grip : -0.5},
-	     "Retro Off-Road" : baseStats,
+	     "Retro Off-Road" : {Speed : 0, Acceleration : 0, Weight : 0, Handling : -1, Grip : 0},
 	     "Wood" : {Speed : -0.25, Acceleration : 0.25, Weight : -0.25, Handling : -0.25, Grip : 0.5},
 	     "Gold Tires" : {Speed : .25, Acceleration : 0.25, Weight : -0.25, Handling : 0, Grip : -0.5},
 	     "Sponge" : {Speed : -0.25, Acceleration : 0.5, Weight : -0.75, Handling : 0, Grip : 0},
-	     "Normal Blue" : baseStats,
-	     "Block" : baseStats,
-	     "Button" : baseStats,
+	     "Button" : {Speed : -0.5, Acceleration : 1, Weight : -0.75, Handling : -0.75, Grip : -0.25},
+	     "Off-Road" : {Speed : 0, Acceleration : 0, Weight : 0, Handling : -1, Grip : 0},
 	     "Cushion" : {Speed : -0.25, Acceleration : 0.25, Weight : -0.25, Handling : -0.25, Grip : 0.5},
-	     
 	     "BLANK" : baseStats
 	};
 
