@@ -7,6 +7,8 @@ mk8.UI = (function(mk8,window,$,undefined) {
 		loadingbox = $('#loading-modal'),
 		drivertemplate = '<div class="driver-portrait" data-drivername="{X}"></div>',
 		karttemplate = '<div class="item-image" data-kartname="{X}"><img src="img/kart_0.png"/></div>',
+		wheelstemplate = '<div class="item-image" data-wheelname="{X}"><img src="img/tire_0.png"/></div>',
+		glidertemplate = '<div class="item-image" data-glidername="{X}"><img src="img/glider_0.png"/></div>',
 		selectedbox = $('#driver-highlight'),
 		totalbartemplate = '<div class="verticalbar"></div>',
 		selectorbox = $('#builder-equipment .equipment-selector'),
@@ -51,18 +53,28 @@ mk8.UI = (function(mk8,window,$,undefined) {
 	var buildKartBar = function(){
 		var k = mk8.data.getChassieDataByName();//no name gets all karts
 		for(var x in k){
-			if(k.hasOwnProperty(x)){
+			if(k.hasOwnProperty(x) && k[x].name != "BLANK"){
 				equipmentbox.find('.karts').append(karttemplate.replace("{X}",k[x].name));
 			}
 		}
 	};
 
 	var buildWheelBar = function(){
-
+		var k = mk8.data.getTireDataByName();//no name gets all karts
+		for(var x in k){
+			if(k.hasOwnProperty(x) && k[x].name != "BLANK"){
+				equipmentbox.find('.wheels').append(wheelstemplate.replace("{X}",k[x].name));
+			}
+		}
 	};
 
 	var buildGliderBar = function(){
-
+		var k = mk8.data.getGliderDataByName();//no name gets all karts
+		for(var x in k){
+			if(k.hasOwnProperty(x) && k[x].name != "BLANK"){
+				equipmentbox.find('.gliders').append(glidertemplate.replace("{X}",k[x].name));
+			}
+		}
 	};
 
 	var wireEvents = function(){
