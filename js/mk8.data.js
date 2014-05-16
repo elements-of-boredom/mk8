@@ -234,7 +234,7 @@ mk8.data = (function(mk8,window,$,undefined) {
 		2 : ["Yoshi","Peach","Daisy","Mii (Medium)"], //Medium
 		3 : ["Mario","Luigi","Ludwig","Iggy"], //Fast-Medium
 		4 : ["Donkey Kong","Roy","Waluigi","Rosalina"], //Fast-Heavy
-		5 : ["Metal Mario","Pink Gold Peach", "Mii (Heavy)"], //Heavy
+		5 : ["Metal Mario","Pink Gold Peach"], //Heavy
 		6 : ["Wario", "Morton", "Bowser, Mii(Heavy)"] //Super Heavy
 	};
 
@@ -254,17 +254,17 @@ mk8.data = (function(mk8,window,$,undefined) {
 		"Gold Standard" : {Speed : 0.25, Acceleration : -0.25, Weight : 0.25, Handling : 0, Grip : -0.25},
 		"Sports Coupe" : {Speed : 0.5, Acceleration : -0.25, Weight : 0.25, Handling : 0, Grip : -1.0},
 
-	        "The Duke" : baseStats,
-                "Sport Bike" : {Speed : 0, Acceleration : 0.75, Weight : -0.25, Handling : 0.75, Grip : -1.25},
-                "Yoshi Bike" : {Speed : 0, Acceleration : 0.75, Weight : -0.25, Handling : 0.75, Grip : 1.25},
-                "Jet Bike" : {Speed : 0, Acceleration : 0.75, Weight : -0.25, Handling : 0.75, Grip : -1.25},
-                "Comet" : {Speed : 0, Acceleration : 0.75, Weight : -0.25, Handling : 0.75, Grip : -1.25},
-                "Flame Rider" : {Speed : 0, Acceleration : 0.25, Weight : -0.25, Handling : 0.5, Grip : -0.25},
-                "Mr. Scooty" : {Speed : -0.75, Acceleration : 1.25, Weight : -0.5, Handling : 0.5, Grip : -0.25},
-                "Standard Bike" : {Speed : 0, Acceleration : 0.25, Weight : -0.25, Handling : 0.5, Grip : -0.5},
-                 "Varmint" : {Speed : 0, Acceleration : 0.25, Weight : -0.25, Handling : 0.5, Grip : -0.5},
+        "The Duke" : baseStats,
+        "Sport Bike" : {Speed : 0, Acceleration : 0.75, Weight : -0.25, Handling : 0.75, Grip : -1.25},
+        "Yoshi Bike" : {Speed : 0, Acceleration : 0.75, Weight : -0.25, Handling : 0.75, Grip : 1.25},
+        "Jet Bike" : {Speed : 0, Acceleration : 0.75, Weight : -0.25, Handling : 0.75, Grip : -1.25},
+        "Comet" : {Speed : 0, Acceleration : 0.75, Weight : -0.25, Handling : 0.75, Grip : -1.25},
+        "Flame Rider" : {Speed : 0, Acceleration : 0.25, Weight : -0.25, Handling : 0.5, Grip : -0.25},
+        "Mr. Scooty" : {Speed : -0.75, Acceleration : 1.25, Weight : -0.5, Handling : 0.5, Grip : -0.25},
+        "Standard Bike" : {Speed : 0, Acceleration : 0.25, Weight : -0.25, Handling : 0.5, Grip : -0.5},
+        "Varmint" : {Speed : 0, Acceleration : 0.25, Weight : -0.25, Handling : 0.5, Grip : -0.5},
 
-	        "Bear Rider" : baseStats,
+        "Bear Rider" : baseStats,
 		"Standard Quad" : {Speed : -0, Acceleration : -0.5, Weight : 0.5, Handling : -0.5, Grip : 0.5},
 		"Wild Wiggler" : {Speed : 0, Acceleration : 0.25, Weight : -0.25, Handling : 0.5, Grip : -0.5},
 		"BLANK" : baseStats
@@ -272,7 +272,7 @@ mk8.data = (function(mk8,window,$,undefined) {
 
 	var tiresList = {
 	     "Standard" : baseStats,
-             "Blue Standard" : baseStats,
+         "Blue Standard" : baseStats,
 	     "Off-Road" : baseStats,
 	     "Retro Off-Road" : baseStats,
 	     "Monster" : {Speed : 0, Acceleration : -0.5, Weight : 0.5, Handling : -.75, Grip : 0.75},

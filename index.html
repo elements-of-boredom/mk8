@@ -17,12 +17,12 @@
         </div>
         <div id="builder-equipment">
             <div class="builder-equipment-overlay">
-                <div class="karts column-selector"></div>
-                <div class="wheels column-selector middle-column"></div>
-                <div class="gliders column-selector"></div>
+                <div class="karts column-selector" data-columnname="karts"></div>
+                <div class="tires column-selector middle-column" data-columnname="tires"></div>
+                <div class="gliders column-selector" data-columnname="tires"></div>
 
                 <div class="karts-o column-selector"></div>
-                <div class="wheels-o column-selector middle-column"></div>
+                <div class="tires-o column-selector middle-column"></div>
                 <div class="gliders-o column-selector"></div>
             </div>
             <div class="equipment-selector">
@@ -32,27 +32,27 @@
             </div>
         </div>
         <div id="builder-totals">
-        	<span>Speed</span>
+        	<span>Speed</span><span class="speed-amount numbers"></span>
         	<div id="speed-bar" class="inset-shadow statbar">
         		<div id="speed-amount" class="amount"></div>
         	</div>
 
-        	<span>Acceleration</span>
+        	<span>Acceleration</span><span class="acceleration-amount numbers"></span>
         	<div id="acceleration-bar" class="inset-shadow statbar">
         		<div id="acceleration-amount" class="amount"></div>
         	</div>
 
-        	<span>Weight</span>
+        	<span>Weight</span><span class="weight-amount numbers"></span>
         	<div id="weight-bar" class="inset-shadow statbar">
         		<div id="weight-amount" class="amount"></div>
         	</div>
 
-        	<span>Handling</span>
+        	<span>Handling</span><span class="handling-amount numbers"></span>
         	<div id="handling-bar" class="inset-shadow statbar">
         		<div id="handling-amount" class="amount"></div>
         	</div>
 
-        	<span>Grip</span>
+        	<span>Traction</span><span class="grip-amount numbers"></span>
         	<div id="grip-bar" class="inset-shadow statbar">
         		<div id="grip-amount" class="amount"></div>
         	</div>

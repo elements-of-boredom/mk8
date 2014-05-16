@@ -74,7 +74,7 @@
 	overflow:hidden;
 }
 
-.karts-o,.wheels-o,.gliders-o{
+.karts-o,.tires-o,.gliders-o{
 	position:absolute;
 	top:0px;
 	left:7px;
@@ -84,7 +84,7 @@
 	z-index:2;
 }
 
-.wheels-o{
+.tires-o{
 	top:0px;
 	left:171px;
 }
@@ -143,15 +143,20 @@
 }
 .verticalbar{
 	width:16.55%;
-	-webkit-box-shadow: -3px 0 0 0 rgba(0,0,0,0.7) inset;
-  	box-shadow: -3px 0 0 0 rgba(0,0,0,0.7) inset;
+	-webkit-box-shadow: 3px 0 0 0 rgba(0,0,0,0.7) inset;
+  	box-shadow: 3px 0 0 0 rgba(0,0,0,0.7) inset;
   	height:15px;
   	display:inline-block;
   	position: relative;
   	top:-2px;
   	z-index:3;
 }
-.verticalbar:last-child{
+.numbers{
+	margin-left:10px;
+	float:right;
+	font-size:15px;
+}
+.verticalbar:nth-child(2){
 	box-shadow:none;
 	-webkit-box-shadow:none;
 }

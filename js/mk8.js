@@ -13,9 +13,6 @@ mk8.builder = (function(mk8,window,$,undefined) {
 	my.init = function(){
 		mk8.data.init();
 		mk8.UI.init();
-		setBaseChassie("Standard Kart");
-		setBaseTire("Standard");
-		setBaseGlider("Wario Glider");
 		setBaseDriver("Baby Mario");
 
 		mk8.UI.refreshStats(mk8.builder.calculateTotals());
