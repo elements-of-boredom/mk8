@@ -34,6 +34,8 @@
 	left:0px;
 	padding-left:8px;
 }
+
+
 .equipment-selector{
 	position: relative;
 	z-index:3;
@@ -61,14 +63,35 @@
 	display:inline-block;
 	width:158px;
 	height:350px;
-	background:url('../img/tinygrid.png');
-	opacity:0.5;
+	background-image: url('../img/tinygrid.png') ,-webkit-linear-gradient(90deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 100%), -webkit-linear-gradient(-90deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 100%);
+  	background-image:url('../img/tinygrid.png') , -moz-linear-gradient(0deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 100%), -moz-linear-gradient(180deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 100%);
+  	background-image:url('../img/tinygrid.png') , linear-gradient(0deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 100%), linear-gradient(180deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 100%);
+  	background-position: 50% 50%;
 	margin:24px 2px 0 0;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
 	overflow:hidden;
 }
+
+.karts-o,.wheels-o,.gliders-o{
+	position:absolute;
+	top:0px;
+	left:7px;
+	background-image:linear-gradient(0deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 100%), linear-gradient(180deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 100%);
+	z-index:2;
+}
+
+.wheels-o{
+	top:0px;
+	left:171px;
+}
+
+.gliders-o{
+	top:0px;
+	left:337px;
+}
+
 .middle-column{width:161px;}
 
 #loading-modal{

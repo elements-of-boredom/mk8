@@ -286,7 +286,7 @@ mk8.data = (function(mk8,window,$,undefined) {
 	     "Metal" : {Speed : 0.25, Acceleration : -0.5, Weight : 0.5, Handling : 0, Grip : -0.5}, 
 	     "Wooden" : {Speed : -0.25, Acceleration : 0.25, Weight : -0.25, Handling : -0.25, Grip : 0.5},
 	     "Gold Tires" : {Speed : .25, Acceleration : 0.25, Weight : -0.25, Handling : 0, Grip : -0.5},
-	     "Sponge" {Speed : -0.25, Acceleration : 0.25, Weight : -0.25, Handling : -0.25, Grip : 0.5},
+	     "Sponge" : {Speed : -0.25, Acceleration : 0.25, Weight : -0.25, Handling : -0.25, Grip : 0.5},
 	     "Button" : {Speed : -0.5, Acceleration : 1, Weight : -0.5, Handling : 0.25, Grip : -0.25},
 	     "Cushion" : {Speed : -0.25, Acceleration : 0.25, Weight : -0.25, Handling : -0.25, Grip : 0.5},
 	     "BLANK" : baseStats
