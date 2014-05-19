@@ -250,8 +250,8 @@ mk8.data = (function(mk8,window,$,undefined) {
 		"Biddybuggy" : {Speed : -0.75, Acceleration : 1.25, Weight : -0.5, Handling : 0.5, Grip : -0.25},
 		"Landship" : {Speed	: -0.75, Acceleration : 1.25, Weight : -0.5, Handling : 0.5, Grip : -0.25},
 		"Circuit Special" : {Speed : 0.5, Acceleration : -0.25, Weight : 0.25, Handling : 0, Grip : -1},
-		"Pipe Frame" : {Speed : -0.25, Acceleration : 0.25, Weight : -0.25, Handling : 0, Grip : 0.25},
-		"Gold Standard" : {Speed : 0.25, Acceleration : -0.25, Weight : 0.25, Handling : 0, Grip : -0.25},
+		"Pipe Frame" : {Speed : 0, Acceleration : 0.25, Weight : -0.25, Handling : 0.5, Grip : -0.5},
+		"Gold Standard" : {Speed : 0.5, Acceleration : -0.25, Weight : 0.25, Handling : 0, Grip : -1.0},
 		"Sports Coupe" : {Speed : 0.5, Acceleration : -0.25, Weight : 0.25, Handling : 0, Grip : -1.0},
 
         "The Duke" : baseStats,
