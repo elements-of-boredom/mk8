@@ -72,6 +72,11 @@
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
 	overflow:hidden;
+	position:relative;
+}
+
+.column-selector > div{
+	position:relative;
 }
 
 .karts-o,.tires-o,.gliders-o{

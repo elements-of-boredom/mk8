@@ -3,12 +3,13 @@
 mk8.UI = (function(mk8,window,$,undefined) {
 	var my = {},
 		currentColumn = 'karts',
+		isAnimating = false,
 		driverbox = $('#builder-driver'),
 		totalsbox = $('#builder-totals'),
 		loadingbox = $('#loading-modal'),
 		drivertemplate = '<div class="driver-portrait" data-drivername="{X}"></div>',
 		karttemplate = '<div class="item-image" data-kartname="{X}"><img src="img/kart_0.png"/></div>',
-		tirestemplate = '<div class="item-image" data-wheelname="{X}"><img src="img/tire_0.png"/></div>',
+		tirestemplate = '<div class="item-image" data-tirename="{X}"><img src="img/tire_0.png"/></div>',
 		glidertemplate = '<div class="item-image" data-glidername="{X}"><img src="img/glider_0.png"/></div>',
 		selectedbox = $('#driver-highlight'),
 		totalbartemplate = '<div class="verticalbar"></div>',
@@ -59,7 +60,7 @@ mk8.UI = (function(mk8,window,$,undefined) {
 		for(var x in k){
 			if(k.hasOwnProperty(x) && k[x].name != "BLANK"){
 				i++;
-				equipmentbox.find('.karts').append(karttemplate.replace("{X}",k[x].name));
+				equipmentbox.find('.karts-container').append(karttemplate.replace("{X}",k[x].name));
 				if(i == 2){
 					//We default our selects to the 2nd in the list for now.
 					mk8.builder.setChassie(k[x].name);
@@ -74,7 +75,7 @@ mk8.UI = (function(mk8,window,$,undefined) {
 		for(var x in k){
 			if(k.hasOwnProperty(x) && k[x].name != "BLANK"){
 				i++;
-				equipmentbox.find('.tires').append(tirestemplate.replace("{X}",k[x].name));
+				equipmentbox.find('.tires-container').append(tirestemplate.replace("{X}",k[x].name));
 				if(i == 2){
 					//We default our selects to the 2nd in the list for now.
 					mk8.builder.setTire(k[x].name);
@@ -89,7 +90,7 @@ mk8.UI = (function(mk8,window,$,undefined) {
 		for(var x in k){
 			if(k.hasOwnProperty(x) && k[x].name != "BLANK"){
 				i++;
-				equipmentbox.find('.gliders').append(glidertemplate.replace("{X}",k[x].name));
+				equipmentbox.find('.gliders-container').append(glidertemplate.replace("{X}",k[x].name));
 				if(i == 2){
 					//We default our selects to the 2nd in the list for now.
 					mk8.builder.setGlider(k[x].name);
@@ -141,8 +142,50 @@ mk8.UI = (function(mk8,window,$,undefined) {
 	};
 
 	var slideItems = function(direction){
-		//animate the column up or down 
-		//equipmentbox.find('.' + currentColumn).animate({top:})
+		//get the first box in the list, we'll use its height
+		var box = equipmentbox.find('.' + currentColumn + '-container .item-image').first();
+		//get the offset of the entire column (we move it around to fake animation)
+		var currentoffset = equipmentbox.find('.' + currentColumn + '-container').position().top;
+
+		if(direction > 0){
+			//if we clicked up,we move the list down, take the last box and put it on the top of the list
+			equipmentbox.find('.' + currentColumn + '-container .item-image').last().prependTo(equipmentbox.find('.' + currentColumn + '-container'));
+			equipmentbox.find('.' + currentColumn + '-container').css({top:currentoffset - box.height() -20});
+		}else{
+			equipmentbox.find('.' + currentColumn + '-container .item-image').first().appendTo(equipmentbox.find('.' + currentColumn + '-container '));
+		}
+		//Get the current offset again after we shifted everything.
+		currentoffset = equipmentbox.find('.' + currentColumn + '-container').position().top;
+
+		//dont allow a click action to take place IF we are already animating. Prevents jquery from puking and getting stuck between 2 items
+		if(!isAnimating){
+			isAnimating = true;
+			equipmentbox.find('.' + currentColumn + '-container').animate(
+				{
+					top:(currentoffset + (direction * box.height())) + (direction > 0 ? 0 : -20) //20px is the margin difference
+				},250,'swing',function(){
+					isAnimating = false;
+					selectItem(equipmentbox.find('.' + currentColumn + '-container .item-image').eq(1));
+				});
+		}
+	};
+
+	var selectItem = function(item){
+		switch(currentColumn){
+			case 'tires':
+				mk8.builder.setTire(item.data('tirename'));
+				break;
+			case 'gliders':
+				mk8.builder.setGlider(item.data('glidername'));
+				break;
+			case 'karts':
+				mk8.builder.setChassie(item.data('kartname'));
+				break;
+			default:
+				break;
+		}
+
+		updateTotals(mk8.builder.calculateTotals());
 	};
 
 	//endregion #Privates
