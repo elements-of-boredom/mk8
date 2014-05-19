@@ -25,6 +25,18 @@
 	vertical-align: top;
 
 }
+
+#builder-info{
+	color:white;
+	font-size:26px;
+	text-align:center;
+	background:rgba(0,0,0,0.4);
+	width:40%;
+	margin:0 auto;
+	height:40px;
+	line-height:40px;
+}
+
 .builder-equipment-overlay{
 	background : url('../img/selectorbg.png');
 	width:493px;
@@ -187,5 +199,4 @@
   color: rgba(0,0,0,0.9);
   -o-text-overflow: clip;
   text-overflow: clip;
-
 }

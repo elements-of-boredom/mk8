@@ -7,6 +7,7 @@ mk8.UI = (function(mk8,window,$,undefined) {
 		driverbox = $('#builder-driver'),
 		totalsbox = $('#builder-totals'),
 		loadingbox = $('#loading-modal'),
+		infobox = $('#builder-info'),
 		drivertemplate = '<div class="driver-portrait" data-drivername="{X}"></div>',
 		karttemplate = '<div class="item-image" data-kartname="{X}"><img src="img/kart_0.png"/></div>',
 		tirestemplate = '<div class="item-image" data-tirename="{X}"><img src="img/tire_0.png"/></div>',
@@ -101,12 +102,10 @@ mk8.UI = (function(mk8,window,$,undefined) {
 
 	var wireEvents = function(){
 		driverbox.on('click','.driver-portrait',function(){
-			currentColumn = 'driver';
 			mk8.builder.setDriver($(this).data('drivername'));
 			highlightDriver($(this));
-			var stats = mk8.builder.calculateTotals();
-			console.log(stats);
-			updateTotals(stats);
+			infobox.find('.info-name').text($(this).data('drivername'));
+			updateTotals(mk8.builder.calculateTotals());
 		});
 
 		equipmentbox.on('click', '.column-selector',function(){
@@ -189,12 +188,15 @@ mk8.UI = (function(mk8,window,$,undefined) {
 	var selectItem = function(item){
 		switch(currentColumn){
 			case 'tires':
+				infobox.find('.info-name').text(item.data('tirename'));
 				mk8.builder.setTire(item.data('tirename'));
 				break;
 			case 'gliders':
+				infobox.find('.info-name').text(item.data('glidername'));
 				mk8.builder.setGlider(item.data('glidername'));
 				break;
 			case 'karts':
+				infobox.find('.info-name').text(item.data('kartname'));
 				mk8.builder.setChassie(item.data('kartname'));
 				break;
 			default:
