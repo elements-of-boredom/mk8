@@ -101,6 +101,7 @@ mk8.UI = (function(mk8,window,$,undefined) {
 
 	var wireEvents = function(){
 		driverbox.on('click','.driver-portrait',function(){
+			currentColumn = 'driver';
 			mk8.builder.setDriver($(this).data('drivername'));
 			highlightDriver($(this));
 			var stats = mk8.builder.calculateTotals();
@@ -113,6 +114,19 @@ mk8.UI = (function(mk8,window,$,undefined) {
 			selectorbox.animate({left:$(this).position().left-5});
 			currentColumn = $(this).data('columnname');
 		});
+
+		/* Allows for keybard navigation of columns but to work right it needs
+			-alot- more work than initially assumed and im not sure its really even desired.
+		$('body').on('keydown', function(event){
+			if(event.which == 40 && currentColumn != 'driver'){  //down
+				event.preventDefault();
+				slideItems(-1);
+			}else if(event.which == 38 && currentColumn != 'driver'){ //up
+				event.preventDefault();
+				slideItems(1);
+			}
+		});
+		*/
 
 		upArrow.on('click', function(){
 			slideItems(1);
@@ -151,11 +165,9 @@ mk8.UI = (function(mk8,window,$,undefined) {
 			//if we clicked up,we move the list down, take the last box and put it on the top of the list
 			equipmentbox.find('.' + currentColumn + '-container .item-image').last().prependTo(equipmentbox.find('.' + currentColumn + '-container'));
 			equipmentbox.find('.' + currentColumn + '-container').css({top:currentoffset - box.height() -20});
-		}else{
-			equipmentbox.find('.' + currentColumn + '-container .item-image').first().appendTo(equipmentbox.find('.' + currentColumn + '-container '));
-		}
-		//Get the current offset again after we shifted everything.
-		currentoffset = equipmentbox.find('.' + currentColumn + '-container').position().top;
+			//Get the current offset again after we shifted everything.
+			currentoffset = equipmentbox.find('.' + currentColumn + '-container').position().top;
+		}		
 
 		//dont allow a click action to take place IF we are already animating. Prevents jquery from puking and getting stuck between 2 items
 		if(!isAnimating){
@@ -163,8 +175,12 @@ mk8.UI = (function(mk8,window,$,undefined) {
 			equipmentbox.find('.' + currentColumn + '-container').animate(
 				{
 					top:(currentoffset + (direction * box.height())) + (direction > 0 ? 0 : -20) //20px is the margin difference
-				},250,'swing',function(){
+				},200,'swing',function(){
 					isAnimating = false;
+					if(direction < 0){
+						equipmentbox.find('.' + currentColumn + '-container .item-image').first().appendTo(equipmentbox.find('.' + currentColumn + '-container'));
+						equipmentbox.find('.' + currentColumn + '-container').css({top:currentoffset - 10});
+					}
 					selectItem(equipmentbox.find('.' + currentColumn + '-container .item-image').eq(1));
 				});
 		}
