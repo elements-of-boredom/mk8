@@ -235,7 +235,7 @@ mk8.data = (function(mk8,window,$,undefined) {
 		3 : ["Mario","Luigi","Ludwig","Iggy"], //Fast-Medium
 		4 : ["Donkey Kong","Roy","Waluigi","Rosalina"], //Fast-Heavy
 		5 : ["Metal Mario","Pink Gold Peach"], //Heavy
-		6 : ["Wario", "Morton", "Bowser", Mii(Heavy)"] //Super Heavy
+		6 : ["Wario", "Morton", "Bowser", "Mii(Heavy)"] //Super Heavy
 	};
 
 	var chassiesList = {
