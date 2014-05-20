@@ -247,7 +247,7 @@ mk8.data = (function(mk8,window,$,undefined) {
 		"Steel Diver" : {Speed : 0, Acceleration : -0.5, Weight : 0.5, Handling : -0.5, Grip : 0.5},
 		"Badwagon" : {Speed : 0, Acceleration : -0.5, Weight : 0.5, Handling : -0.5, Grip : 0.5},
 		"Tri-Speeder" : {Speed : 0, Acceleration : -0.5, Weight : 0.5, Handling : -0.5, Grip : 0.5},
-		"Biddybuggy" : {Speed : -0.75, Acceleration : 1.25, Weight : -0.5, Handling : 0.5, Grip : -0.25},
+		"Biddy Buggy" : {Speed : -0.75, Acceleration : 1.25, Weight : -0.5, Handling : 0.5, Grip : -0.25},
 		"Landship" : {Speed	: -0.75, Acceleration : 1.25, Weight : -0.5, Handling : 0.5, Grip : -0.25},
 		"Circuit Special" : {Speed : 0.5, Acceleration : -0.25, Weight : 0.25, Handling : 0, Grip : -1},
 		"Pipe Frame" : {Speed : 0, Acceleration : 0.25, Weight : -0.25, Handling : 0.5, Grip : -0.5},
@@ -264,8 +264,8 @@ mk8.data = (function(mk8,window,$,undefined) {
         "Standard Bike" : {Speed : 0, Acceleration : 0.25, Weight : -0.25, Handling : 0.5, Grip : -0.5},
         "Varmint" : {Speed : 0, Acceleration : 0.25, Weight : -0.25, Handling : 0.5, Grip : -0.5},
 
-        "Bear Rider" : baseStats,
-		"Standard Quad" : {Speed : -0, Acceleration : -0.5, Weight : 0.5, Handling : -0.5, Grip : 0.5},
+        "Teddy Buggy" : baseStats,
+		"Standard ATV" : {Speed : -0, Acceleration : -0.5, Weight : 0.5, Handling : -0.5, Grip : 0.5},
 		"Wild Wiggler" : {Speed : 0, Acceleration : 0.25, Weight : -0.25, Handling : 0.5, Grip : -0.5},
 		"BLANK" : baseStats
 	};
