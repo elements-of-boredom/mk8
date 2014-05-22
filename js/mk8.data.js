@@ -231,8 +231,8 @@ mk8.data = (function(mk8,window,$,undefined) {
 	var driverList = {
 		0 : ["Baby Mario", "Baby Luigi", "Baby Daisy","Baby Peach", "Baby Rosalina", "Lemmy", "Mii(Light)"], //Light
 		1 : ["Toad","Toadette","Wendy","Larry","Lakitu","Koopa Troopa","Shy Guy"], //Light Medium
-		2 : ["Yoshi","Peach","Daisy","Mii (Medium)"], //Medium
-		3 : ["Mario","Luigi","Ludwig","Iggy"], //Fast-Medium
+		2 : ["Yoshi","Peach","Daisy"], //Medium
+		3 : ["Mario","Luigi","Ludwig","Iggy", "Mii (Medium)"], //Fast-Medium
 		4 : ["Donkey Kong","Roy","Waluigi","Rosalina"], //Fast-Heavy
 		5 : ["Metal Mario","Pink Gold Peach"], //Heavy
 		6 : ["Wario", "Morton", "Bowser", "Mii(Heavy)"] //Super Heavy
@@ -256,7 +256,7 @@ mk8.data = (function(mk8,window,$,undefined) {
 
         "The Duke" : baseStats,
         "Sport Bike" : {Speed : 0, Acceleration : 0.75, Weight : -0.25, Handling : 0.75, Grip : -1.25},
-        "Yoshi Bike" : {Speed : 0, Acceleration : 0.75, Weight : -0.25, Handling : 0.75, Grip : 1.25},
+        "Yoshi Bike" : {Speed : 0, Acceleration : 0.75, Weight : -0.25, Handling : 0.75, Grip : -1.25},
         "Jet Bike" : {Speed : 0, Acceleration : 0.75, Weight : -0.25, Handling : 0.75, Grip : -1.25},
         "Comet" : {Speed : 0, Acceleration : 0.75, Weight : -0.25, Handling : 0.75, Grip : -1.25},
         "Flame Rider" : {Speed : 0, Acceleration : 0.25, Weight : -0.25, Handling : 0.5, Grip : -0.25},
@@ -285,7 +285,7 @@ mk8.data = (function(mk8,window,$,undefined) {
 	     "Crimson Slim" : {Speed : 0.25, Acceleration : -0.25, Weight : 0, Handling : 0.25, Grip : -0.5},
 	     "Metal" : {Speed : 0.25, Acceleration : -0.5, Weight : 0.5, Handling : 0, Grip : -0.5}, 
 	     "Wooden" : {Speed : -0.25, Acceleration : 0.25, Weight : -0.25, Handling : -0.25, Grip : 0.5},
-	     "Gold Tires" : {Speed : .25, Acceleration : 0.25, Weight : -0.25, Handling : 0, Grip : -0.5},
+	     "Gold Tires" : {Speed : 0.25, Acceleration : -0.5, Weight : 0.5, Handling : 0, Grip : -0.5},
 	     "Sponge" : {Speed : -0.25, Acceleration : 0.25, Weight : -0.25, Handling : -0.25, Grip : 0.5},
 	     "Button" : {Speed : -0.5, Acceleration : 1, Weight : -0.5, Handling : 0.25, Grip : -0.25},
 	     "Cushion" : {Speed : -0.25, Acceleration : 0.25, Weight : -0.25, Handling : -0.25, Grip : 0.5},
