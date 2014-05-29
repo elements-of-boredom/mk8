@@ -311,8 +311,8 @@ mk8.data = (function(mk8,window,$,undefined) {
 		"Mario","Luigi","Peach","Daisy","Rosalina","Metal Mario", //Row 1
 		"Yoshi","Toad","Koopa Troopa","Shy Guy","Lakitu","Toadette", //Row 2
 		"Baby Mario", "Baby Luigi","Baby Peach", "Baby Daisy", "Baby Rosalina","Pink Gold Peach", //Row 3
-		"Bowser", "Donkey Kong", "Wario", "Waluigi", "Lemmy","Roy", //Row 4
-		"Iggy","Larry","Wendy","Ludwig","Morton","Mii" //Row 5
+		"Bowser", "Donkey Kong", "Wario", "Waluigi", "Iggy","Roy", //Row 4
+		"Lemmy","Larry","Wendy","Ludwig","Morton","Mii" //Row 5
 	];
 
 	return my;
