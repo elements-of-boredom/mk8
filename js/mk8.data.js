@@ -284,7 +284,7 @@ mk8.data = (function(mk8,window,$,undefined) {
 	     "Slim" : {Speed : 0.25, Acceleration : -0.25, Weight : 0, Handling : 0.25, Grip : -0.5},
 	     "Crimson Slim" : {Speed : 0.25, Acceleration : -0.25, Weight : 0, Handling : 0.25, Grip : -0.5},
 	     "Metal" : {Speed : 0.25, Acceleration : -0.5, Weight : 0.5, Handling : 0, Grip : -0.5}, 
-	     "Wooden" : {Speed : -0.25, Acceleration : 0.25, Weight : -0.25, Handling : -0.25, Grip : 0.5},
+	     "Wood" : {Speed : -0.25, Acceleration : 0.25, Weight : -0.25, Handling : -0.25, Grip : 0.5},
 	     "Gold Tires" : {Speed : 0.25, Acceleration : -0.5, Weight : 0.5, Handling : 0, Grip : -0.5},
 	     "Sponge" : {Speed : -0.25, Acceleration : 0.25, Weight : -0.25, Handling : -0.25, Grip : 0.5},
 	     "Button" : {Speed : -0.5, Acceleration : 1, Weight : -0.5, Handling : 0.25, Grip : -0.25},
@@ -293,7 +293,7 @@ mk8.data = (function(mk8,window,$,undefined) {
 	};
 
 	var glidersList = {
-       "Wario Glider" : baseStats,
+       "Wario Wing" : baseStats,
        "Waddle Wing" : baseStats,
        "Sail Plane" : baseStats,
        "Cloud Balloon" : {Speed : 0, Acceleration : 0.25, Weight : -0.25, Handling : 0, Grip : 0},

@@ -9,9 +9,9 @@ mk8.UI = (function(mk8,window,$,undefined) {
 		loadingbox = $('#loading-modal'),
 		infobox = $('#builder-info'),
 		drivertemplate = '<div class="driver-portrait" data-drivername="{X}"></div>',
-		karttemplate = '<div class="item-image" data-kartname="{X}"><img src="img/kart_0.png"/></div>',
-		tirestemplate = '<div class="item-image" data-tirename="{X}"><img src="img/tire_0.png"/></div>',
-		glidertemplate = '<div class="item-image" data-glidername="{X}"><img src="img/glider_0.png"/></div>',
+		karttemplate = '<div class="item-image" data-kartname="{X}"><img src="img/{Y}.png"/></div>',
+		tirestemplate = '<div class="item-image" data-tirename="{X}"><img src="img/{Y}.png"/></div>',
+		glidertemplate = '<div class="item-image" data-glidername="{X}"><img src="img/{Y}.png"/></div>',
 		selectedbox = $('#driver-highlight'),
 		totalbartemplate = '<div class="verticalbar"></div>',
 		selectorbox = $('#builder-equipment .equipment-selector'),
@@ -26,6 +26,7 @@ mk8.UI = (function(mk8,window,$,undefined) {
 		buildWheelBar();
 		buildGliderBar();
 		wireEvents();
+		updateInfoBox();
 		console.log('UI initialized');
 		
 	};
@@ -61,7 +62,7 @@ mk8.UI = (function(mk8,window,$,undefined) {
 		for(var x in k){
 			if(k.hasOwnProperty(x) && k[x].name != "BLANK"){
 				i++;
-				equipmentbox.find('.karts-container').append(karttemplate.replace("{X}",k[x].name));
+				equipmentbox.find('.karts-container').append(karttemplate.replace("{X}",k[x].name).replace("{Y}",k[x].name.replace(" ","_")));
 				if(i == 2){
 					//We default our selects to the 2nd in the list for now.
 					mk8.builder.setChassie(k[x].name);
@@ -76,7 +77,7 @@ mk8.UI = (function(mk8,window,$,undefined) {
 		for(var x in k){
 			if(k.hasOwnProperty(x) && k[x].name != "BLANK"){
 				i++;
-				equipmentbox.find('.tires-container').append(tirestemplate.replace("{X}",k[x].name));
+				equipmentbox.find('.tires-container').append(tirestemplate.replace("{X}",k[x].name).replace("{Y}",k[x].name.replace(" ","_")));
 				if(i == 2){
 					//We default our selects to the 2nd in the list for now.
 					mk8.builder.setTire(k[x].name);
@@ -91,7 +92,7 @@ mk8.UI = (function(mk8,window,$,undefined) {
 		for(var x in k){
 			if(k.hasOwnProperty(x) && k[x].name != "BLANK"){
 				i++;
-				equipmentbox.find('.gliders-container').append(glidertemplate.replace("{X}",k[x].name));
+				equipmentbox.find('.gliders-container').append(glidertemplate.replace("{X}",k[x].name).replace("{Y}",k[x].name.replace(" ","_")));
 				if(i == 2){
 					//We default our selects to the 2nd in the list for now.
 					mk8.builder.setGlider(k[x].name);
@@ -127,6 +128,10 @@ mk8.UI = (function(mk8,window,$,undefined) {
 		});
 		*/
 
+		selectorbox.on('click',function(){
+			infobox.find('.info-name').text(equipmentbox.find('.' + currentColumn + '-container .item-image').eq(1).data(currentColumn.substring(0,currentColumn.length-1) + 'name'));
+		});
+
 		upArrow.on('click', function(){
 			slideItems(1);
 		});
@@ -147,6 +152,14 @@ mk8.UI = (function(mk8,window,$,undefined) {
 				$('#builder-totals .'+ x.toLowerCase() + '-amount').text(stats[x]);
 			}
 		};
+	};
+
+	var updateInfoBox = function(name){
+		if(name){
+			infobox.find('.info-name').text(name);
+		}else{
+			infobox.find('.info-name').text(equipmentbox.find('.' + currentColumn + '-container .item-image').eq(1).data(currentColumn.substring(0,currentColumn.length-1) + 'name'));
+		}
 	};
 
 	var highlightDriver = function(target){
@@ -188,15 +201,15 @@ mk8.UI = (function(mk8,window,$,undefined) {
 	var selectItem = function(item){
 		switch(currentColumn){
 			case 'tires':
-				infobox.find('.info-name').text(item.data('tirename'));
+				updateInfoBox(item.data('tirename'));
 				mk8.builder.setTire(item.data('tirename'));
 				break;
 			case 'gliders':
-				infobox.find('.info-name').text(item.data('glidername'));
+				updateInfoBox(item.data('glidername'));
 				mk8.builder.setGlider(item.data('glidername'));
 				break;
 			case 'karts':
-				infobox.find('.info-name').text(item.data('kartname'));
+				updateInfoBox(item.data('kartname'));
 				mk8.builder.setChassie(item.data('kartname'));
 				break;
 			default:
